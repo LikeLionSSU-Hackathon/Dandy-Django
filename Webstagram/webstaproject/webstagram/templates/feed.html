@@ -1,0 +1,56 @@
+
+{% extends 'base.html' %}
+<html>
+<head>
+    {% block content %}
+    <meta charset="UTF-8">
+    <title>Instagram</title>
+    {% load static %}
+    <!-- <link href="background.css" rel="stylesheet" type="text/css"/>-->
+    <link href="{% static 'css/feed.css' %}" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="{% static 'img/icon.png' %}">
+</head>
+
+<body>
+    
+    <div class="main">
+        <section class="cardViewSection">
+            <!--posts model 모든 객체들  나중에 profile에서 선택하면 그 post만 보여주게 바꾸자-->
+            <div class="cardView">
+                <header>
+                    <div class="userNickName">{{post.author.username}}</div>
+                </header>
+                <div class="cardImage">
+                    <img src="{{post.image.url}}" alt="sample">
+                </div>
+
+                <div class="cardInfo">
+                    <div class="infoLeft">
+                        <img class="feedImg" src="{% static 'img/liked.png' %}" alt="좋아용"/>
+                        <img class="feedImg" src="{% static 'img/comment.png' %}" alt="코멘트"/>
+                        <img class="feedImg" src="{% static 'img/upload.png' %}" alt="업로드"/>
+                    </div>
+                    <div class="infoRight">
+                        <a href="{% url 'edit' post.id %}">
+                        <img class="feedImg" src="{% static 'img/edit.png' %}" alt="수정"/>
+                        </a>
+                        <a href="{% url 'delete' post.id %}">
+                        <img class="feedImg" src="{% static 'img/delete.png' %}" alt="삭제"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="comment">
+                    comment1<br>
+                    comment2<br>
+                </div>
+                <div class="comment_form">
+                    <form action="">
+                        <input type="text" placeholder="댓글 입력...">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+   
+</body>
+{% endblock %}

@@ -1,0 +1,47 @@
+header{
+    height:25px;
+    background-color: white;
+    border-bottom: 0.5px solid rgb(88, 86, 86);
+    flex-direction:row;
+    display:flex;
+    padding: 10px 0 10px 0;
+    align-items: center;
+    justify-content: space-between; /*요소 사이 공간생성*/
+}
+
+.left_box{
+    display:flex;
+    position:relative;
+    padding-left:20%;
+    justify-content: flex-start;
+}
+
+.right_box{
+    display:flex;
+    padding-right:20%;
+    justify-content: flex-end;
+    
+}
+
+.right_box img{
+    height:22px;
+}
+
+.left_box img{
+    height:25px;
+}
+.line img{
+    height:90%;
+    width:40%;
+}
+
+.favicon_frame{
+    padding-right:15px;
+}
+.heart_box{
+    padding-right: 25px;
+}
+
+
+
+

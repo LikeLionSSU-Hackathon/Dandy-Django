@@ -1,0 +1,11 @@
+<head>
+{% load static %}
+<link href="{% static 'css/feed.css' %}" rel="stylesheet" type="text/css"/>
+</head>
+{% block content %}
+<form action="{% url 'update' post.id %}" method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+    <p>사진 : <input type="file" name="image" value = "{{post.image}}"></p>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

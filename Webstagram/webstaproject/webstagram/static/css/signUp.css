@@ -1,0 +1,76 @@
+.signUp_container{
+    width:300px;
+    height:450px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border:1px solid rgb(197, 195, 195);
+    padding:50px 50px;
+    margin:100px auto 13px;
+    background-color: white;
+
+}
+
+
+.signUp_container .userSignUp {
+    display:flex;
+    width: 300px;
+    padding: 13px 0 13px 13px;
+    background-color: rgb(248, 248, 248);
+    border: 1.5px solid rgb(197, 195, 195);
+    margin-bottom: 8px;
+}
+
+.signUp_container .joinLetter{
+    font-size:115%;
+    text-align: center;
+    color:rgb(107, 106, 106);
+    margin-top:none;
+    border-top:none;
+}
+
+.signUp_container .line{
+    width:100%;
+    margin-bottom:50px;
+    border-top:1px solid rgb(192, 192, 192);
+}
+
+
+
+#signUpButton {
+    width:315px;
+    background-color: rgba(30, 30, 236, 0.363);
+    color: white;
+    padding-top:10px;
+    padding-bottom: 10px;
+    margin-top: 15px;
+    border:none;
+}
+
+#signUpButton:hover{ /*버튼 색변화*/
+    background-color: rgba(30, 30, 236, 0.856);
+}
+
+.instagramText {
+    width: 210px;
+
+}
+
+.joinInsta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid rgb(197, 195, 195);
+    width: 400px;
+    margin: 0 auto 100px;
+}
+
+.joinBtn {
+    background-color: white;
+    color: rgba(44, 44, 238, 0.74);
+    font-weight:bold;
+    font-size:90%;
+    border:none;
+}
