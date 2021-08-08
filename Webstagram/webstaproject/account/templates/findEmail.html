@@ -9,9 +9,14 @@
 <body>
     <div class="login_container">
         <div>아이디(이메일) 찾기</div>
-        <div style="display:none;">{{message}}</div>
+        {% if messages %}
+        {% for message in messages %}
+        <span id="message">{{message}}</span>
+        {% endfor %}
+        {% endif %}
         <form action="{% url 'findEmail' %}" method="POST" id="login-form">
         {% csrf_token %}
+        <input type="hidden" name="next" value="{% url 'findEmail' %}">
         <input type="text" class="userLogin" name='find_username' placeholder="이름을 입력해주세요." required>
         <input type="text" class="userLogin" name='phone' placeholder="전화번호를 입력해주세요 010-1111-1111" minlength="6" required>      
         <button id="loginButton">submit</button>

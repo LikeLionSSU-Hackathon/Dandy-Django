@@ -13,11 +13,16 @@
     <div class="signUp_container">
         <img class="instagramText" src="{% static 'img/logo_text.png' %}" alt="instagramText">
         <h2 class="joinLetter">친구들의 사진과 동영상을 보려면 가입하세요.</h2>
-        <div id="message">{{message}}</div>
+        {% if messages %}
+        {% for message in messages %}
+        <span id="message">{{message}}</span>
+        {% endfor %}
+        {% endif %}
         <hr class="line">
         <form action="{% url 'signUp' %}" method='POST'>
         {% csrf_token %}
         {{ form.as_p }}
+        <input type="hidden" name="next" value="{% url 'signUp' %}">
         <input type="text" class="userSignUp" name='email' placeholder="이메일(아이디)를 입력해주세요" required>
         <input type="password" class="userSignUp" name='pwd' placeholder="비밀번호를 입력해주세요" minlength="6" required>
         <input type="password" class="userSignUp" name='pwdCheck' placeholder="비밀번호를 확인해주세요" minlength="6" required>

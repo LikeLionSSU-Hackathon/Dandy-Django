@@ -9,12 +9,12 @@
 <body>
     <h1>this is a mypage</h1>
     {% if user.is_authenticated %}
-        {{user.username}}
+        <h1>Hello, username: {{user.username}}</h1>
         <a href="{% url 'logout' %}">
             <button class="logoutbutton">로그아웃</button>
         </a>
     {%else%}
-
+        <!--authenticate false면, views 에서 login으로 redirect-->
     {% endif %}
 
 </body>

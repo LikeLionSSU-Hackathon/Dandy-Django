@@ -9,9 +9,14 @@
 <body>
     <div class="login_container">
         <div>비밀번호 변경</div>
-        <div style="display:none;">{{message}}</div>
+        {% if messages %}
+        {% for message in messages %}
+        <span id="message">{{message}}</span>
+        {% endfor %}
+        {% endif %}
         <form action="{% url 'changePwd' message%}" method="POST" id="login-form">
         {% csrf_token %}
+        <input type="hidden" name="next" value="{% url 'changePwd' message%}">
         <input type="password" class="userLogin" name='pwd' placeholder="변경할 비밀번호를 입력해주세요." required>
         <input type="password" class="userLogin" name='pwdCheck' placeholder="비밀번호를 다시 입력해주세요." required>   
         <button id="loginButton">submit</button>

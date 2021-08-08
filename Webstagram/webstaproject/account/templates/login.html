@@ -11,10 +11,15 @@
 <body>
     <div class="login_container">
         <img class="instagramText" src="{% static 'img/logo_text.png' %}" alt="instagramText">
+        {% if messages %}
+        {% for message in messages %}
         <span id="message">{{message}}</span>
+        {% endfor %}
+        {% endif %}
         <form name="login-form" action="{% url 'login' %}" method="POST" id="login-form">
         {{ form.as_p }}
         {% csrf_token %}
+        <input type="hidden" name="next" value="{% url 'login' %}">
         <input type="text" class="userLogin" name='email' placeholder="이메일(아이디)를 입력해주세요" required>
         <input type="password" class="userLogin" name='pwd' placeholder="비밀번호를 입력해주세요" minlength="6" required>      
         <button id="loginButton">로그인</button>    
