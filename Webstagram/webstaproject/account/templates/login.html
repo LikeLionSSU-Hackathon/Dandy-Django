@@ -17,8 +17,10 @@
         {% csrf_token %}
         <input type="text" class="userLogin" name='email' placeholder="이메일(아이디)를 입력해주세요" required>
         <input type="password" class="userLogin" name='pwd' placeholder="비밀번호를 입력해주세요" minlength="6" required>      
-        <button id="loginButton">로그인</button>
+        <button id="loginButton">로그인</button>    
     </form>
+    <a href="{% url 'findEmail' %}"><button>아이디 찾기</button></a>
+        <a href="{% url 'findPwd' %}"><button>비밀번호 찾기</button></a>
     </div>
     <div>
         <footer class="joinInsta">

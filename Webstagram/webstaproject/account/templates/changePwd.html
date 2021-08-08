@@ -8,12 +8,12 @@
 </head>
 <body>
     <div class="login_container">
-        <div>아이디(이메일) 찾기</div>
+        <div>비밀번호 변경</div>
         <div style="display:none;">{{message}}</div>
-        <form action="{% url 'findEmail' %}" method="POST" id="login-form">
+        <form action="{% url 'changePwd' message%}" method="POST" id="login-form">
         {% csrf_token %}
-        <input type="text" class="userLogin" name='find_username' placeholder="이름을 입력해주세요." required>
-        <input type="text" class="userLogin" name='phone' placeholder="전화번호를 입력해주세요 010-1111-1111" minlength="6" required>      
+        <input type="password" class="userLogin" name='pwd' placeholder="변경할 비밀번호를 입력해주세요." required>
+        <input type="password" class="userLogin" name='pwdCheck' placeholder="비밀번호를 다시 입력해주세요." required>   
         <button id="loginButton">submit</button>
     </form>
     </div>

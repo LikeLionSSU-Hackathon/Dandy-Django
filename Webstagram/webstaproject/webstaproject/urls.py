@@ -28,4 +28,6 @@ urlpatterns = [
     path('signUp/',acc.signUp,name='signUp'),
     path('mypage/',websta.myPage,name='mypage'),
     path('findEmail/',acc.find_email,name='findEmail'),
+    path('findPwd/',acc.find_pwd,name='findPwd'),
+    path('changePwd/<str:usermsg>',acc.changePwd,name='changePwd'),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

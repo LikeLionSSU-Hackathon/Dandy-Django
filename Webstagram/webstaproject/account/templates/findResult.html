@@ -2,12 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    {% load static %}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     
-    <h1>find result page, {{message}}</h1>
+    <h1>find result page, <span id='message'>{{message}}</span></h1>
+    <a href="{% url 'login' %}" id='linkto'>
+        <button id='result-button'>go login</button>
+    </a>
+
+    <!--여기서 message 가지고 view로 이동, message가 not exist이면 다시 찾기 버튼, -->
 </body>
 </html>

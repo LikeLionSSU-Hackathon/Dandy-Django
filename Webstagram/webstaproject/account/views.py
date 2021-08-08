@@ -86,9 +86,7 @@ def logout_user(request):
 def find_email(request):
     #전화번호로 이메일 찾기
     #결과 보여주는 화면 연결
-
-
-    #로그인 되어있는 상태에서 find email 하면 username이 현재 계정으로 2개 보내지는 문제 발생 => 로그인 되어있을 때는 사용 못하게 하자
+  if request.method=='POST':
     username=request.POST.get('find_username','')
     phoneNum=request.POST.get('phone','')
     checkUser=Profile.objects.filter(phoneNum=phoneNum)
@@ -105,9 +103,52 @@ def find_email(request):
             print('wrong phone number')
             return render(request,'findEmail.html',{'message':'user not exist'})
 
+  else:
+      return render(request,'findEmail.html')
+
 
 def find_pwd(request):
     #전화번호로 비밀번호 찾기
     #결과 보여주는 화면 연결
+  if request.method=='POST':
+    username=request.POST.get('find_username','')
+    phoneNum=request.POST.get('phone','')
+    email=request.POST.get('email')
+
+    checkUser=Profile.objects.filter(phoneNum=phoneNum)
+    if not checkUser.exists():
+        print('user not exist by phone number')
+        return render(request,'findPassword.html',{'message':'user not exist'})
+    else:
+        findUser=Profile.objects.get(phoneNum=phoneNum).user
+        print('found user: ',findUser)
+        if findUser.username==username and findUser.email==email:
+            print('found user')
+            return render(request,'changePwd.html',{'message':findUser.email})
+        else:
+            print('wrong email or name')
+            return render(request,'findPassword.html',{'message':'user not exist'})
+
+  else:
+      return render(request,'findPassword.html')
+
+    
     #비밀번호 찾은 후, 2,3,4번쨰 글자느 *로 표시
-    return render(request,'login.html')
+
+def changePwd(request,usermsg):
+  if request.method=='POST':
+    newPw=request.POST.get('pwd','')
+    pwCheck=request.POST.get('pwdCheck','')
+    if(newPw!=pwCheck):
+        print('password check fail')
+        return render(request,'changePwd.html',{'message':usermsg})
+
+    user=User.objects.get(email=usermsg)
+    user.set_password(newPw)
+    print(newPw)
+    user.save()
+    return redirect('login')
+  else:
+      return render(request,'changePwd.html')
+
+
