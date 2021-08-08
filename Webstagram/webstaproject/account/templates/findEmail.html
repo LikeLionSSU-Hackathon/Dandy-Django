@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login_container">
+        <div>아이디(이메일) 찾기</div>
+        <div style="display:none;">{{message}}</div>
+        <form action="{% url 'findEmail' %}" method="POST" id="login-form">
+        {% csrf_token %}
+        <input type="text" class="userLogin" name='find_username' placeholder="이름을 입력해주세요." required>
+        <input type="text" class="userLogin" name='phone' placeholder="전화번호를 입력해주세요 010-1111-1111" minlength="6" required>      
+        <button id="loginButton">로그인</button>
+    </form>
+    </div>
+</body>
+</html>

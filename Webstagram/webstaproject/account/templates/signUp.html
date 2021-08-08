@@ -9,16 +9,20 @@
     <link rel="icon" href="{% static 'img/icon.png' %}">
 </head>
 <body>
+    
     <div class="signUp_container">
         <img class="instagramText" src="{% static 'img/logo_text.png' %}" alt="instagramText">
         <h2 class="joinLetter">친구들의 사진과 동영상을 보려면 가입하세요.</h2>
+        <div id="message">{{message}}</div>
         <hr class="line">
         <form action="{% url 'signUp' %}" method='POST'>
         {% csrf_token %}
-        <input type="text" class="userSignUp" name='email' placeholder="휴대폰 번호 또는 이메일 주소">
-        <input type="text" class="userSignUp" name='realname' placeholder="성명">
-        <input type="text" class="userSignUp" name='username' placeholder="사용자 이름">
-        <input type="password" class="userSignUp" name='pwd' placeholder="비밀번호">
+        {{ form.as_p }}
+        <input type="text" class="userSignUp" name='email' placeholder="이메일(아이디)를 입력해주세요" required>
+        <input type="password" class="userSignUp" name='pwd' placeholder="비밀번호를 입력해주세요" minlength="6" required>
+        <input type="password" class="userSignUp" name='pwdCheck' placeholder="비밀번호를 확인해주세요" minlength="6" required>
+        <input type="text" class="userSignUp" name='username' placeholder="이름(실명)을 입력해주세요" required>
+        <input type="text" class="userSignUp" name='phoneNum' placeholder="전화번호를 입력해주세요 010-1111-1111" minlength="10" required>
         <button id="signUpButton">가입</button>
         </form>
     </div>
@@ -31,5 +35,6 @@
             </p>
         </footer>
     </div>
+    <script type="text/javascript" src="{% static 'javascript/signUp.js' %}"></script>
 </body>
 </html>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Daddy를 Dandy하게</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'img/logo-new.png' %}">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/product/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&family=Poppins:ital,wght@1,800&display=swap" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    
+    <!-- Custom styles for this template -->
+    <link href="../static/css/home.css" rel="stylesheet">
+  </head>
+  <body>
+ 
+    <!-- header : nav bar -->
+    <header class="site-header sticky-top py-1" >
+      <nav class="container d-flex flex-column flex-md-row justify-content-between" >
+        <a class="py-2 d-none d-md-inline-block main-logo-div" href="#">
+          <img src="{% static 'img/logo-new.png' %}" id="main_logo" alt="메인로고" height="30" style="margin-top:-8px; margin-bottom:-10px;">
+        </a>
+          <div class="nav col-lg-auto me-lg-auto mb-2 mb-md-0 nav-div">
+            <a class="px-2 d-none d-md-inline-block nav-link nav-menu" href="#" style="margin-left: 30px;">Brand Story</a>
+            <a class="px-2 d-none d-md-inline-block nav-link nav-menu" href="#">Style Check</a>    
+          </div>
+          <div id="search-div">
+          <form id="search-form">
+            <input type="search-input" class="form-control" placeholder="Search..." aria-label="Search">
+          </form>
+          </div>
+          <a class="py-2 d-none d-md-inline-block nav-link nav-menu" style="margin-left:0px; " href="{% url 'login' %}">Join/Login</a>
+          <a class="py-2 d-none d-md-inline-block" href="{% url 'mypage' %}">
+            <img src="{% static 'img/011-user.png' %}" alt="마이페이지" width="30" height="30"></a>
+          
+      </nav>
+    </header>
+
+<main>
+  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" id="first-block">
+    <div class="col-md-6 p-lg-5 mx-auto my-5" id="main-title-block-div" >
+      <h1 class="display-4 fw-bold main-title-text" id="main-title-text"><span class="eng">Daddy</span>를<br> <span class="eng" style="color:rgb(0,255,255);">Dandy</span>하게</h1>
+      <p class="lead main-title-text" id="main-title-subtext" style="margin-top:25px;">아버지를 위한 패션 스타일링, <br>지금 댄디와 함께 하세요!</p>
+      <a class="newBtn main-title-text" href="../Question/question.html" style="margin-left:100px;">지금 스타일 체크하기</a>
+    </div>   
+  </div>
+
+  <!--아래부터는 feature block, 배경 색상 없애려면 bg-light 지우기-->
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 block-wrapper">
+    <!--inner div-->
+    <div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden feature-wrapper">
+      <!--feature text div-->
+      <div class="my-3 p-3 feature-text" >
+       <h2 class="display-6 fw-bold feature-word" >아버지! <br>오늘도 등산복을 입으시나요??</h2>
+       <p class="lead subText feature-word">Daddy에서 아버지에게 딱 맞는 데일리룩을 추천드려요! </p>
+      </div>
+      <!--feature image block-->
+      <div class="feature" style="margin-right:-50px;">
+        <div class="feature_img_div">
+          <img class="feature_img" src="{% static 'img/p1.png' %}" alt="stop!">
+        </div>
+      </div>
+   </div>
+   <!--end of inner div-->
+
+   <!--line image block-->
+   <div style="margin-bottom:0px;">
+    <img src="{% static 'img/line2.png' %}" width="15"style="opacity: 0.8;">
+  </div>
+  </div>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 block-wrapper ">
+    <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden feature-wrapper" style="margin-bottom:30px;">
+
+      <!--feature img block-->
+      <div class="feature" style="margin-left:-80px; margin-right:-30px;">
+        <div class="feature_img_div">
+          <img class="feature_img" src="{% static 'img/p3.png' %}" alt="stop!">
+        </div>
+      </div>
+      <!--feature text-->
+      <div class="my-3 p-3 feature-text">
+       <h2 class="display-6 fw-bold feature-word">아버지! <br>혹시 옷을 찾아볼 시간이 없으신가요?</h2>
+       <p class="lead subText feature-word">단 3분안에 맞춤 스타일리스트를 매칭해드립니다. </p>
+      </div>
+   </div>
+   <!--end of inner block-->
+
+   <!--line img block-->
+   <div>
+     <img src="{% static 'img/line2.png' %}" width="15" style="opacity: 0.8;">
+   </div>
+
+  </div>
+
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 block-wrapper">
+    <div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden feature-wrapper" style="margin-bottom:50px; margin-top:-30px;">
+      <!--feature text-->
+      <div class="my-3 p-3 feature-text">
+       <h2 class="display-6 fw-bold feature-word">아버지! <br>T.P.O.는 Daddy가 책임질게요.</h2>
+       <p class="lead subText feature-word">상황에 맞는 옷 추천으로 좋은 시간을 좋은 분들과 함께 보내세요!</p>
+      </div>
+
+      <!--feature img-->
+      <div class="feature" style="width:500px; margin-right:-70px;">
+        <div class="feature_img_div" style="width:500px;">
+          <img class="feature_img" src="{% static 'img/p2.png' %}" alt="stop!">
+        </div>
+      </div>
+
+   </div>
+   <!--end of inner block-->
+  </div>
+
+
+  <!--end block (마지막 블록, 검정배경 블록)-->
+  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" id="end-block">
+    <div class="col-md-6 p-lg-5 mx-auto my-5">
+      <div class="my-3 p-3" style="width:max-content;">
+        <h2 class="display-7 fw-bold end-title-text" style="margin-left: -60px;" >
+          <span style="color:rgb(226, 224, 224);">많고 많은 사람 중에 그대 한 사람</span><br>당신의 아버지를 위한 <span style="color:rgb(0,255,255);">맞춤 스타일링</span>을 시작하세요.</h2>
+       </div>
+      
+      <a class="newBtn" href="../Question/question.html">지금 스타일 체크하기</a>
+    </div>   
+  </div>
+
+
+</main>
+
+<footer class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <a class="py-2 d-none d-md-inline-block" href="#">
+        <img src="{% static 'img/logo-new.png' %}" alt="footer_icon" width="60" height="auto">
+      </a>
+    </div>
+
+    <div class="footer_text">
+      <h5>About</h5>
+      <p>Copyright © 2021 숭실대 멋쟁이사자처럼 아이디어톤 7조. All rights reserved.<br> Contact webmaster for more information. likelion_ssu@gmail.com</p>
+     
+    </div>
+  </div>
+</footer>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>
