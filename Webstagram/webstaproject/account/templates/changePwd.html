@@ -24,14 +24,11 @@
             </div>
     <div class="signIn_container">
         <h2 class="joinLetter">비밀번호 변경</h2>
-        {% if messages %}
-        {% for message in messages %}
+        <span style="display:none;">{{usermsg}}</span>
         <span id="message">{{message}}</span>
-        {% endfor %}
-        {% endif %}
-        <form action="{% url 'changePwd' message%}" method="POST" id="login-form">
+        <form action="{% url 'changePwd' usermsg %}" method="POST" id="login-form">
         {% csrf_token %}
-        <input type="hidden" name="next" value="{% url 'changePwd' message%}">
+        <input type="hidden" name="next" value="{% url 'changePwd' usermsg %}">
         <p class="signInIndex">비밀번호</p>
         <input type="password" class="userSignIn" name='pwd' placeholder="변경할 비밀번호를 입력해주세요." required>
         <p class="signInIndex">비밀번호 확인</p>

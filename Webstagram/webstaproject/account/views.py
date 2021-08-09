@@ -138,7 +138,7 @@ def find_pwd(request):
         print('found user: ',findUser)
         if findUser.username==username and findUser.email==email:
             print('found user')
-            return render(request,'changePwd.html',{'message':findUser.email})
+            return render(request,'changePwd.html',{'usermsg':findUser.email})
         else:
             print('wrong email or name')
             messages.error(request,'회원정보를 다시 한 번 확인해주세요.')
@@ -158,8 +158,9 @@ def changePwd(request,usermsg):
 
     if(newPw!=pwCheck):
         print('password check fail')
-        messages.error(request,'비밀번호가 일치하지 않습니다.')
-        return HttpResponseRedirect(next)
+        #messages.error(request,'비밀번호가 일치하지 않습니다.')
+        #return HttpResponseRedirect(next)
+        return render(request,'changePwd.html',{'message':'비밀번호가 일치하지 않습니다. ','usermsg':usermsg})
 
     user=User.objects.get(email=usermsg)
     user.set_password(newPw)
