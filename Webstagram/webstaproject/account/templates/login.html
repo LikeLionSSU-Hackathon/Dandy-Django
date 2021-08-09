@@ -4,37 +4,59 @@
     <meta charset="UTF-8">
     <title>Instagram</title>
     {% load static %}
-    <link href="{% static 'css/login.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'css/signIn.css' %}" rel="stylesheet" type="text/css"/>
     <link href="background.css" rel="stylesheet" type="text.css"/>
     <link rel="icon" href="{% static 'img/icon.png' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&family=Poppins:ital,wght@1,800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="login_container">
-        <img class="instagramText" src="{% static 'img/logo_text.png' %}" alt="instagramText">
-        {% if messages %}
-        {% for message in messages %}
-        <span id="message">{{message}}</span>
-        {% endfor %}
-        {% endif %}
-        <form name="login-form" action="{% url 'login' %}" method="POST" id="login-form">
-        {{ form.as_p }}
-        {% csrf_token %}
-        <input type="hidden" name="next" value="{% url 'login' %}">
-        <input type="text" class="userLogin" name='email' placeholder="이메일(아이디)를 입력해주세요" required>
-        <input type="password" class="userLogin" name='pwd' placeholder="비밀번호를 입력해주세요" minlength="6" required>      
-        <button id="loginButton">로그인</button>    
-    </form>
-    <a href="{% url 'findEmail' %}"><button>아이디 찾기</button></a>
-        <a href="{% url 'findPwd' %}"><button>비밀번호 찾기</button></a>
-    </div>
+    <div style="height:100%;">
+        <header>
+            <img class="top-logo" src="{% static 'img/logo-new.png' %}" alt="instagramText">
+        </header>
+        <div style="display:flex; width:100%; height:100vh;">
+            <div class="left_container">
+                <h1 class="left-title"><span class="eng">Daddy</span>를<br> <span class="eng" style="color:rgb(0,255,255);">Dandy</span>하게</h1>
+                <h3 class="left-subtitle">아버지를 위한 맞춤 스타일링</h3>
+            </div>
+        <div class="signIn_container">
+            <h2 class="joinLetter">로그인 SignIn</h2>
+            {% if messages %}
+            {% for message in messages %}
+            <span id="message">{{message}}</span>
+            {% endfor %}
+            {% endif %}
+            <form name="login-form" action="{% url 'login' %}" method="POST" id="login-form">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{% url 'login' %}">
+            <p class="signInIndex">이메일 (아이디)</p>
+            <input type="text" class="userSignIn" name='email' placeholder="이메일(아이디)를 입력해주세요" required>
+            <p class="signInIndex">비밀번호</p>
+            <input type="password" class="userSignIn" name='pwd' placeholder="비밀번호를 입력해주세요" minlength="6" required>      
+            <button id="loginButton">로그인</button>    
+            </form>
+            <div id="find_container">
+            <a href="{% url 'findEmail' %}" ><button class="findBtn">아이디 찾기</button></a>
+            <a href="{% url 'findPwd' %}"><button  class="findBtn">비밀번호 찾기</button></a>
+            </div>
+
+            <footer class="joinDandy">
+                <p class="join">혹시 아직 회원이 아니신가요?
+                    <a href="{% url 'signUp' %}" >
+                    <button class="joinBtn">가입하기</button>
+                    </a>
+                </p>
+            </footer>
+
+        </div>
     <div>
-        <footer class="joinInsta">
-            <p class="join">계정이 없으신가요? 
-                <a href="{% url 'signUp' %}" >
-                <button class="joinBtn">가입하기</button>
-                </a>
-            </p>
-        </footer>
+        
+    </div>
+    </div>
     </div>
     <script type="text/javascript" src="{% static 'javascript/signIn.js' %}"></script>
     

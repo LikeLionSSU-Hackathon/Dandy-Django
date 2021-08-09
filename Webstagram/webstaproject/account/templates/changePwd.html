@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link href="{% static 'css/signIn.css' %}" rel="stylesheet" type="text/css"/>
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&family=Poppins:ital,wght@1,800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="login_container">
-        <div>비밀번호 변경</div>
+    <div style="height:100%;">
+        <header>
+            <img class="top-logo" src="{% static 'img/logo-new.png' %}" alt="instagramText">
+        </header>
+        <div style="display:flex; width:100%; height:100vh;">
+            <div class="left_container">
+                <h1 class="left-title"><span class="eng">Daddy</span>를<br> <span class="eng" style="color:rgb(0,255,255);">Dandy</span>하게</h1>
+                <h3 class="left-subtitle">아버지를 위한 맞춤 스타일링</h3>
+            </div>
+    <div class="signIn_container">
+        <h2 class="joinLetter">비밀번호 변경</h2>
         {% if messages %}
         {% for message in messages %}
         <span id="message">{{message}}</span>
@@ -17,10 +32,15 @@
         <form action="{% url 'changePwd' message%}" method="POST" id="login-form">
         {% csrf_token %}
         <input type="hidden" name="next" value="{% url 'changePwd' message%}">
-        <input type="password" class="userLogin" name='pwd' placeholder="변경할 비밀번호를 입력해주세요." required>
-        <input type="password" class="userLogin" name='pwdCheck' placeholder="비밀번호를 다시 입력해주세요." required>   
-        <button id="loginButton">submit</button>
+        <p class="signInIndex">비밀번호</p>
+        <input type="password" class="userSignIn" name='pwd' placeholder="변경할 비밀번호를 입력해주세요." required>
+        <p class="signInIndex">비밀번호 확인</p>
+        <input type="password" class="userSignIn" name='pwdCheck' placeholder="변경할 비밀번호를 다시 입력해주세요." required>
+            
+        <button id="loginButton">로그인하기</button>
     </form>
+    </div>
+    </div>
     </div>
 </body>
 </html>

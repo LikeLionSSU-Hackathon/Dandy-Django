@@ -7,39 +7,63 @@
     <link href="{% static 'css/signUp.css' %}" rel="stylesheet" type="text/css"/>
     <link href="background.css" rel="stylesheet" type="text.css"/>
     <link rel="icon" href="{% static 'img/icon.png' %}">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&family=Poppins:ital,wght@1,800&display=swap" rel="stylesheet">
+
 </head>
 <body>
+    <div style="height:100%;">
+    <header>
+        <img class="top-logo" src="{% static 'img/logo-new.png' %}" alt="instagramText">
+    </header>
+    <div style="display:flex; width:100%; height:100vh;">
+        <div class="left_container">
+            <h1 class="left-title"><span class="eng">Daddy</span>를<br> <span class="eng" style="color:rgb(0,255,255);">Dandy</span>하게</h1>
+            <h3 class="left-subtitle">아버지를 위한 맞춤 스타일링</h3>
+        </div>
+            <div class="signUp_container">
+                
+                <h2 class="joinLetter">회원가입 Sign Up</h2>
+                {% if messages %}
+                {% for message in messages %}
+                <span id="message">{{message}}</span>
+                {% endfor %}
+                {% endif %}
+                <hr class="line">
+                <form action="{% url 'signUp' %}" method='POST'>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="hidden" name="next" value="{% url 'signUp' %}">
+                <p class="signUpIndex">이메일 (아이디)</p>
+                <input type="text" class="userSignUp" name='email' placeholder="이메일(아이디)를 입력해주세요" required>
+                <p class="signUpIndex">이름</p>
+                <input type="text" class="userSignUp" name='username' placeholder="이름(실명)을 입력해주세요" required>
+                <p class="signUpIndex">전화번호</p>
+                <input type="text" class="userSignUp" name='phoneNum' placeholder="전화번호를 입력해주세요: 010-1111-1111" minlength="10" required>
+                <p class="signUpIndex">비밀번호</p>
+                <input type="password" class="userSignUp" name='pwd' placeholder="비밀번호를 입력해주세요" minlength="6" required>
+                <p class="signUpIndex">비밀번호 확인</p>
+                <input type="password" class="userSignUp" name='pwdCheck' placeholder="비밀번호를 확인해주세요" minlength="6" required>
+                
+                <button id="signUpButton">가입</button>
+                </form>
+
+                <div>
+                    <div class="joinDandy">
+                        <p class="join">계정이 있으신가요? 
+                            <a href="{% url 'login' %}">
+                            <button class="joinBtn">로그인</button>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
     
-    <div class="signUp_container">
-        <img class="instagramText" src="{% static 'img/logo_text.png' %}" alt="instagramText">
-        <h2 class="joinLetter">친구들의 사진과 동영상을 보려면 가입하세요.</h2>
-        {% if messages %}
-        {% for message in messages %}
-        <span id="message">{{message}}</span>
-        {% endfor %}
-        {% endif %}
-        <hr class="line">
-        <form action="{% url 'signUp' %}" method='POST'>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="hidden" name="next" value="{% url 'signUp' %}">
-        <input type="text" class="userSignUp" name='email' placeholder="이메일(아이디)를 입력해주세요" required>
-        <input type="password" class="userSignUp" name='pwd' placeholder="비밀번호를 입력해주세요" minlength="6" required>
-        <input type="password" class="userSignUp" name='pwdCheck' placeholder="비밀번호를 확인해주세요" minlength="6" required>
-        <input type="text" class="userSignUp" name='username' placeholder="이름(실명)을 입력해주세요" required>
-        <input type="text" class="userSignUp" name='phoneNum' placeholder="전화번호를 입력해주세요 010-1111-1111" minlength="10" required>
-        <button id="signUpButton">가입</button>
-        </form>
-    </div>
-    <div>
-        <footer class="joinInsta">
-            <p class="join">계정이 있으신가요? 
-                <a href="{% url 'login' %}">
-                <button class="joinBtn">로그인</button>
-                </a>
-            </p>
-        </footer>
-    </div>
     <script type="text/javascript" src="{% static 'javascript/signUp.js' %}"></script>
 </body>
 </html>

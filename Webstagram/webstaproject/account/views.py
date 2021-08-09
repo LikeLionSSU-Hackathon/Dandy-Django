@@ -25,6 +25,7 @@ def login_user(request):
             username=User.objects.get(email=email).username
             user=authenticate(username=username,password=password)
             if user is not None:
+                #여기서 이메일도 비교 (get한 user의 email과 입력 email 비교해서 맞으면 login, 아니면 다른 user 찾기? )
                 login(request,user)
                 return redirect('home')  
 
@@ -110,7 +111,7 @@ def find_email(request):
             print('found user')
             return render(request,'findResult.html',{'message':Profile.objects.get(phoneNum=phoneNum).user.email})
         else:
-            print('username and phone number dosen\'t match')
+            print('username and phone number match fail')
             messages.error(request,'회원정보를 다시 한 번 확인해주세요.')
             return HttpResponseRedirect(next)
 

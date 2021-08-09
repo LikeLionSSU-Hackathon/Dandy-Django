@@ -50,8 +50,13 @@ header{
     font-weight:600;
   }
 
+  .joinLetter{
+    font-family:'Noto Sans KR',sans-serif;
+    font-size:22px;
+  }
+
   
-.signUp_container{
+.signIn_container{
     display:flex;
     flex-grow:1;
     flex-direction: column;
@@ -62,7 +67,7 @@ header{
     padding-top:50px;
 }
 
-.signUp_container .userSignUp {
+.signIn_container .userSignIn {
     display:flex;
     width: 300px;
     padding: 13px 0 13px 13px;
@@ -71,22 +76,22 @@ header{
     margin-bottom: 8px;
 }
 
-.signUp_container .signUpIndex{
+.signIn_container .signInIndex{
     font-size: 13px;
     margin-bottom:2px;
     font-family:'Noto Sans KR',sans-serif;
 }
 
-.signUp_container .joinLetter{
+.signIn_container .joinLetter{
     text-align: center;
     color:rgb(0, 0, 0);
     margin-top:none;
     border-top:none;
     font-family:'Noto Sans KR',sans-serif;
-    font-size:22px;
+    margin-bottom:50px;
 }
 
-#signUpButton {
+#loginButton {
     width:315px;
     background-color: rgb(101, 210, 224);
     color: white;
@@ -96,12 +101,30 @@ header{
     border:none;
     font-family:'Noto Sans KR',sans-serif;
     cursor:pointer;
-    font-size:15px;
 }
 
-#signUpButton:hover{ /*버튼 색변화*/
+#loginButton:hover{ /*버튼 색변화*/
     background-color: rgb(0,255,255);
 }
+
+#find_container{
+    width:220px;
+    display:flex;
+    margin-top:10px;
+    justify-content:space-between;
+}
+
+.findBtn{
+    background-color: white;
+    color: rgb(78, 78, 82);
+    font-weight:bold;
+    font-size:70%;
+    border:none;
+    font-family:'Noto Sans KR',sans-serif;
+    border-bottom:1px solid rgb(78, 78, 82);
+    cursor:pointer;
+}
+
 
 .joinDandy {
     display: flex;
@@ -109,16 +132,17 @@ header{
     justify-content: center;
     background-color: white;
     width: 400px;
-    margin-top:20px;
+    margin-top:50px;
     font-family:'Noto Sans KR',sans-serif;
 }
 
 .joinBtn {
     background-color: white;
-    color: rgba(0,255,255);
+    color: rgba(44, 44, 238, 0.74);
     font-weight:bold;
     font-size:90%;
     border:none;
     font-family:'Noto Sans KR',sans-serif;
     cursor:pointer;
+    color: rgba(0,255,255);
 }
