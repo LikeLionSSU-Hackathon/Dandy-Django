@@ -51,3 +51,36 @@ def changePwd_account(request,msg):
     else:
         print('msg from account: ',msg)
         return render(request,'changePwd.html',{'message':' ','usermsg':msg})
+
+def q1(request):
+    return render(request,'question.html')
+
+def q2(request):
+    return render(request,'question2.html')
+
+def q3(request):
+    return render(request,'question3.html')
+
+def q4(request):
+    return render(request,'question4.html')
+
+def q5(request):
+    return render(request,'question5.html')
+
+def q6(request):
+    return render(request,'question6.html')
+
+def q7(request):
+    return render(request,'question7.html')
+
+def q8_1(request):
+    return render(request,'question8-1.html')
+
+def q8(request):
+    return render(request,'question8.html')
+
+def q9(request):
+    return render(request,'question9.html')
+
+def stylist(request):
+    return render(request,'stylist.html')

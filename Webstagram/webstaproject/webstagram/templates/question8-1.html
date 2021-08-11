@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Question</title>
+    {% load static %}
+    <style> body{
+        background-color: #FFFFFF;
+    }</style>
+    <link href="{% static 'css/question.css' %}" rel="stylesheet" type="text/css" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/product/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../Question/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e7a3ea1342.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap" rel="stylesheet"><head>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    
+    <!-- Custom styles for this template -->
+    <link href="product.css" rel="stylesheet">
+  </head>
+  <body>
+ 
+    <!-- header : nav bar -->
+    <nav class="navbar">
+      <div class="navbar_logo">
+        <img src="{% static 'img/logo-new.png' %}" height=40px width="90px">
+      </div>
+
+      <ul class="navbar_menu">
+        <li class="nav_li"><a href="">회사 소개</a></li>
+        <li class="nav_li"><a href="">이용 가이드</a></li>
+        <li class="nav_li"><a href="">스타일리스트</a></li>
+        <li class="nav_li"><a href="">자주 묻는 질문</a></li>
+      </ul>
+
+      <ul class="navbar_user">
+        <li class="nav_li"><a href="{% url 'signUp' %}">회원가입</a></li>
+        <li class="nav_li"><a href="{% url 'login' %}">로그인</a></li>
+        <li class="nav_li"><a href="{% url 'logout' %}">로그아웃</a></li>
+        <li class="nav_li"><a href="{% url 'mypage' %}"><img src="{% static 'img/011-user.png' %}" style="width:30px; height:30px; margin-top:-5px;"></a></li>
+      </ul>
+  </nav>
+
+<body>
+    <div class= "question1_box">
+        <!-- <img class="earth" src="img/cloth.jpg"> -->
+        <p class="number"> 7 /8 </p>
+        <p class="questionText"> 원하시는 요일, 시간, 지역을 작성해 주세요. </p>
+        
+        <form>
+            <!-- 날짜선택 -->
+            <input type="date">
+            <input type="datetime-local">
+ 
+            <!-- 색상선택 -->
+            <!-- <input type="color"> -->
+ 
+            <!-- 모바일에서 키패드의 모양에 관련 -->
+            <!-- <input type="email">
+            <input type="tel"> -->
+ 
+            <!-- 텍스트입력시에 옆에 x버튼 생기는 것 -->
+            <!-- <input type="search"> -->
+ 
+            <!-- 슬라이드 위젯 -->
+            <!-- <input type="range" min="1" max="10" value="2" step="2">
+ 
+            <input type="number" min="-2" max="10" step="3" value="-2"> -->
+        </form>
+ 
+        <hr>
+ 
+        <!-- 추가된 input의 속성들 -->
+        <form action="{% url 'q9' %}" method="GET">
+             <!-- 서밋버튼 -->
+             <input type="text" placeholder="input name"><br>
+             <input type="text" placeholder="사는 지역" name="Email"><br>
+             <input type="text" placeholder="Email" name="Email">
+             <input type="hidden" name="aaa" value="1234">
+             <input type="submit">
+ 
+            <!-- 힌트 -->
+            
+            
+            <!-- 반드시 입력해야 하는 값을 검증하는 속성 -->
+            <!-- <input type="text" placeholder="Email" required><br> -->
+ 
+            <!-- 수정이 불가하도록 -->
+            <!-- <input type="text" readonly value="SAM"><br> -->
+ 
+            <!-- 최대글자수 제한 -->
+            <!-- <input type="text" maxlength="5"><br> -->
+ 
+            <!-- 웹페이지가 로딩될때 가장 먼저 포커스를 받고 싶다먄 -->
+            <!-- <input type="text" autofocus><br> -->
+ 
+            <!-- 자동완성기능 -->
+            <!-- <input type="text" autocomplete list="datas"> -->
+ 
+            <!-- 자동완성으로 보여질 항목리스트 -->
+            <!-- <datalist id="datas">
+                <option value="canada" label="캐나다"></option>
+                <option value="china" label="중국"></option>
+                <option value="korea" label="한국"></option>
+            </datalist>    -->
+        </form>
+ 
+        <!-- <hr> -->
+        <!-- hidden 타입 : 사용자 입력없이 서버에 데이터를 보낼 것이 있다면 -->
+        <!-- <form action="question9.html" method="GET">
+            <input type="text" name="name">
+            <input type="hidden" name="aaa" value="1234">
+ 
+            <input type="submit">
+         </form> -->
+ 
+    </body>
+</html>
+
+    </div>
+</body>
+</html>

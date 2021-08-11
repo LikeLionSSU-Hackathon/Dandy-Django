@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Question</title>
+    <style> body{
+        background-color: #FFFFFF;
+    }</style>
+    <link href="{% static 'css/question.css' %}" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/e7a3ea1342.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap" rel="stylesheet"><head>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_logo">
+          <img src="{% static 'img/logo-new.png' %}" height=40px width="90px">
+        </div>
+  
+        <ul class="navbar_menu">
+          <li class="nav_li"><a href="">회사 소개</a></li>
+          <li class="nav_li"><a href="">이용 가이드</a></li>
+          <li class="nav_li"><a href="">스타일리스트</a></li>
+          <li class="nav_li"><a href="">자주 묻는 질문</a></li>
+        </ul>
+  
+        <ul class="navbar_user">
+          <li class="nav_li"><a href="{% url 'signUp' %}">회원가입</a></li>
+        <li class="nav_li"><a href="{% url 'login' %}">로그인</a></li>
+        <li class="nav_li"><a href="{% url 'logout' %}">로그아웃</a></li>
+        <li class="nav_li"><a href="{% url 'mypage' %}"><img src="{% static 'img/011-user.png' %}" style="width:30px; height:30px; margin-top:-5px;"></a></li>
+        </ul>
+    </nav>
+  
+    <div class= "question1_box">
+        <img class="cloth" src="{% static 'img/closet-bg.png' %}" width="500" height="200">
+        
+        <p class="questionText"> 스타일퀴즈를 풀고 스타일리스트에게 옷쇼핑 맡기세요!</p>
+        <p class="questionText2"> 자세하게 작성해주시면 정확하게 추천드릴 수 있어요. </p>
+        <button class= "start" onclick="location.href='/q2'"> 스타일퀴즈 시작하기 </button>    
+    </div>
+
+</body>
+</html>

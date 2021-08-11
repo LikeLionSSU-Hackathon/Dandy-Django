@@ -88,7 +88,7 @@ def signUp(request):
 
 def logout_user(request):
     logout(request)
-    return redirect('login')
+    return redirect('home')
 
 
 def find_email(request):

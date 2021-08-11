@@ -1,0 +1,83 @@
+.container {
+  max-width: 960px;
+}
+
+
+#search-div {
+  display: table;
+}
+
+#search-form {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0px 12px;
+  height: 60px;
+
+  background-color: white;
+  border: 1px solid;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom-color: #e5e8eb;
+}
+
+
+/* Dandy 로고 */
+.navbar_logo {
+  margin-left: 200px;
+}
+
+
+/* Navbar 목록 */
+a {
+  text-decoration: none;
+  color: #333d4b;
+}
+
+.navbar_menu {
+  margin-left: 50px;
+  margin-right: 200px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.navbar_menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+}
+
+.navbar_menu li {
+  padding: 8px 12px;
+  margin-right: 12px;
+}
+
+.navbar_menu li:hover {
+  background-color: #e5e8eb;
+  border-radius: 4px;
+}
+
+
+/* Navbar 회원가입,로그인,마이페이지 */
+.navbar_user {
+  display: flex;
+  list-style: none;
+  margin-top: 16px;
+  margin-left: auto;
+  margin-right: 200px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+}
+
+.navbar_user li {
+  padding: 8px 8px;
+}

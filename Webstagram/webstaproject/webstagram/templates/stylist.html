@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daddy를 Dandy하게</title>
+  {% load static %}
+  <link rel="icon" href="../img/logo-new.png">
+  <link href="{% static 'css/stylist.css' %}" rel="stylesheet">
+  <link href="{% static 'css/nav.css' %}" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/e7a3ea1342.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap" rel="stylesheet"><head>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar_logo">
+      <a href="{% url 'home' %}"><img src="{% static 'img/logo-new.png' %}" height=40px width="90px"></a>
+    </div>
+
+    <ul class="navbar_menu">
+      <li><a href="{% url 'home' %}">회사 소개</a></li>
+      <li><a href="">이용 가이드</a></li>
+      <li><a href="">스타일리스트</a></li>
+      <li><a href="">자주 묻는 질문</a></li>
+    </ul>
+
+    <ul class="navbar_user">
+      <li class="nav_li"><a href="{% url 'signUp' %}">회원가입</a></li>
+        <li class="nav_li"><a href="{% url 'login' %}">로그인</a></li>
+        <li class="nav_li"><a href="{% url 'logout' %}">로그아웃</a></li>
+        <li class="nav_li"><a href="{% url 'mypage' %}"><img src="{% static 'img/011-user.png' %}" style="width:30px; height:30px; margin-top:-5px;"></a></li>
+    </ul>
+  </nav>
+  
+
+  <!-- 헤더 -->
+  <header class="header">
+    <img src="{% static 'img/whitestylist.jpg' %}" alt="">
+    <div class="header_text">    
+      <h2>스타일리스트 고르기</h2>
+      <span>당신의 취향에 맞는 스타일리스트를 골라주세요</>
+    </div>
+  </header>
+
+
+  <!-- 메인 -->
+  <main class="main">
+    <div class="stylist_list">
+      <button class="stylistBtn">
+        <section class="stylist_border">
+          <ul class="style1">
+            <li><div>
+              <img src="{% static 'img/profile/face1.jpg' %}" width="100px" height="100px">
+            </div></li>
+            <li><div class="stylist_text">
+              <div>
+                <h5>조성원 스타일리스트</h5>
+              </div>
+              <ul class="stylist_star">
+                <li><img src="{% static 'img/star2.jpg' %}" height="20px"></li>
+              </ul>
+              <img class="stylist_money" src="{% static 'img/100k.jpg' %}" height="20px">
+            </div></li>
+            <div class="stylist_style">
+              <img src="{% static 'img/style/style1.jpg' %}" height="100px" width="100px">
+              <img src="{% static 'img/style/style2.jpg' %}" height="100px" width="100px">
+              <img src="{% static 'img/style/style3.jpg' %}" height="100px" width="100px">
+            </div>
+          </ul>
+        </section>
+      </button>
+    </div>
+
+    <div class="stylist_list">
+      <button class="stylistBtn">
+        <section class="stylist_border">
+          <ul class="style1">
+            <li><div>
+              <img src="{% static 'img/profile/face2.jpg' %}" width="100px" height="100px">
+            </div></li>
+            <li><div class="stylist_text">
+              <div>
+                <h5>송영진 스타일리스트</h5>
+              </div>
+              <ul class="stylist_star">
+                <li><img src="{% static 'img/star3.jpg' %}" height="20px"></li>
+              </ul>
+              <img class="stylist_money" src="{% static 'img/70k.jpg' %}" height="20px">
+            </div></li>
+            <div class="stylist_style">
+              <img src="{% static 'img/style/style4.jpg' %}" height="100px" width="100px">
+              <img src="{% static 'img/style/style5.jpg' %}" height="100px" width="100px">
+              <img src="{% static 'img/style/style6.jpg' %}" height="100px" width="100px">
+            </div>
+          </ul>
+        </section>
+      </button>
+    </div>
+
+    <div class="stylist_list">
+      <button class="stylistBtn">
+        <section class="stylist_border">
+          <ul class="style1">
+            <li><div>
+              <img src="{% static 'img/profile/face3.jpg' %}" width="100px" height="100px">
+            </div></li>
+            <li><div class="stylist_text">
+              <div>
+                <h5>이소민 스타일리스트</h5>
+              </div>
+              <ul class="stylist_star">
+                <li><img src="{% static 'img/star4.jpg' %}" height="20px"></li>
+              </ul>
+              <img class="stylist_money" src="{% static 'img/45k.jpg' %}" height="20px">
+            </div></li>
+            <div class="stylist_style">
+              <img src="{% static 'img/style/style7.jpg' %}" height="100px" width="100px">
+              <img src="{% static 'img/style/style8.jpg' %}" height="100px" width="100px">
+              <img src="{% static 'img/style/style9.jpg' %}" height="100px" width="100px">
+            </div>
+          </ul>
+        </section>
+      </button>
+    </div>
+  </main>
+</body>
+</html>

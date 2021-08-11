@@ -36,7 +36,6 @@
     </style>
     
     <!-- Custom styles for this template -->
-    <link href="{% static 'css/new-notice.css' %}" rel="stylesheet">
     <link href="{% static 'css/home.css' %}" rel="stylesheet">
     <link href="../static/css/home.css" rel="stylesheet">
     <link href="{% static 'css/notice.css' %}" rel="stylesheet">
@@ -63,7 +62,8 @@
       <ul class="navbar_user">
         <li class="nav_li"><a href="{% url 'signUp' %}">회원가입</a></li>
         <li class="nav_li"><a href="{% url 'login' %}">로그인</a></li>
-        <li class="nav_li"><a href="{% url 'mypage' %}">마이페이지</a></li>
+        <li class="nav_li"><a href="{% url 'logout' %}">로그아웃</a></li>
+        <li class="nav_li"><a href="{% url 'mypage' %}"><img src="{% static 'img/011-user.png' %}" style="width:30px; height:30px; margin-top:-5px;"></a></li>
       </ul>
   </nav>
 
