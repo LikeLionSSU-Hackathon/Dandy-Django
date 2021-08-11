@@ -27,6 +27,7 @@ def mypage(request):
     else:
         return redirect('login')
 
+
 def notice(request):
     return render(request,'notice.html')
 

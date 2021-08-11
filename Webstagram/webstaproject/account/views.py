@@ -168,6 +168,6 @@ def changePwd(request,usermsg):
     user.save()
     return redirect('login')
   else:
-      return render(request,'changePwd.html')
+      return render(request,'changePwd.html',{'message':' ','usermsg':usermsg})
 
 
