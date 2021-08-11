@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Daddy를 Dandy하게</title>
+    {% load static %}
+    <link rel="icon" href="../img/logo-new.png">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/product/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&family=Poppins:ital,wght@1,800&display=swap" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/new-notice.css' %}" rel="stylesheet">
+    <link href="{% static 'css/home.css' %}" rel="stylesheet">
+    <link href="../static/css/home.css" rel="stylesheet">
+    <link href="{% static 'css/notice.css' %}" rel="stylesheet">
+    <link href="{% static 'css/nav.css' %}" rel="stylesheet">
+
+  </head>
+
+ 
+    <!-- header : nav bar -->
+    <!-- header : nav bar -->
+    <!-- header : nav bar -->
+    <nav class="navbar">
+      <div class="navbar_logo">
+        <img src="{% static 'img/logo-new.png' %}" height=40px width="90px">
+      </div>
+
+      <ul class="navbar_menu">
+        <li class="nav_li"><a href="">회사 소개</a></li>
+        <li class="nav_li"><a href="">이용 가이드</a></li>
+        <li class="nav_li"><a href="">스타일리스트</a></li>
+        <li class="nav_li"><a href="">자주 묻는 질문</a></li>
+      </ul>
+
+      <ul class="navbar_user">
+        <li class="nav_li"><a href="{% url 'signUp' %}">회원가입</a></li>
+        <li class="nav_li"><a href="{% url 'login' %}">로그인</a></li>
+        <li class="nav_li"><a href="{% url 'mypage' %}">마이페이지</a></li>
+      </ul>
+  </nav>
+
+    <body>
+        <div id="app-body">
+            <div class="escrow-history">
+                <div class="container setting-header">
+                    <section data-name="page-header" class="row align-items-center">
+                        <div class="col-12">
+                            <h1>공지사항</h1>
+                        </div>
+                    </section>
+                </div>
+                <div class="container setting-body">
+                    <!-- <section data-name="page-info" class="row align-items-center justify-content-between">
+                        <div class="col-6">
+                            <h1>안전거래 내역</h1>
+                        </div>
+                    </section> -->
+                    <div class="row escrow-list-empty justify-content-center">
+                        <div class="escrow-list-empty-text">
+                          <img src="{% static 'img/spinner.gif' %}" width="90px" height="90px"><br><br><br>
+                          <a>공지사항 준비중 입니다.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

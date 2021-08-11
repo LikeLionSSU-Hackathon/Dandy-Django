@@ -1,0 +1,179 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+#body {
+  position: relative;
+  flex-grow: 1;
+  transition: opacity 0.3s ease-in;
+  font-family: Noto Sans KR, Malgun Gothic, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol, Noto Color Emoji;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #323232;
+  text-align: left;
+}
+
+div {
+  display: block;
+}
+
+.mypage-container .mypage-title {
+  font-size: 2.125rem;
+  padding: 3.125rem 0;
+  font-weight: 500;
+  line-height: 1.41;
+  letter-spacing: -0.0462rem;
+  color: #323232;
+  margin: 0;
+}
+
+h1 {
+  display: block;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.container-md,
+.container.container-md {
+  max-width: 630px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mypage-container .main-menu {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #323232;
+}
+
+.main-menu {
+  margin-top: 100px;
+}
+
+.mypage-container .arrow {
+  font-size: 0;
+}
+
+.right-arrow {
+  font-size: 0.75rem;
+}
+
+.mypage-container .sub-menu-container:last-child {
+  margin-bottom: 3.125rem;
+}
+
+.mypage-container .sub-menu-container {
+  padding: 1rem 0;
+}
+
+.mypage-container .sub-menu-container a {
+  display: flex;
+  align-items: center;
+}
+
+.mypage-container .sub-menu-list {
+  display: flex;
+  align-items: center;
+}
+
+.mypage-container .sub-menu {
+  font-size: 1rem;
+  font-weight: 550;
+  color: #737373;
+}
+
+.mypage-container .sub-content {
+  flex: auto;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+.mypage-container .underline {
+  border-bottom: 0.0625rem solid;
+  border-color: #f2f2f2;
+}
+
+.user-profile-picture {
+  position: relative;
+  height: 100% !important;
+}
+
+.user-profile-picture div[data-name="image"].is-square {
+  height: 100%;
+  width: 100%;
+}
+
+.user-profile-picture {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.mypage-container .user-info {
+  /* flex: auto; */
+  text-align: left;
+  padding-left: 0.75rem;
+}
+
+.mypage-container .user-name {
+  display: flex;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #323232;
+}
+
+.mypage-container .user-id {
+  display: flex;
+  font-size: 0.75rem;
+  color: #b5b5b5;
+}
+
+.mypage-container .profile-container {
+  padding: 1rem 0;
+  margin-bottom: 2.5rem;
+}
+
+a {
+  color: #323232;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+ul li {
+  list-style: none;
+}
+
+li {
+  text-align: -webkit-match-parent;
+}
+
+.mypage-container .icon-container {
+  /* align-self: baseline; */
+  align-items: left;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+img {
+  border-style: none;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+}

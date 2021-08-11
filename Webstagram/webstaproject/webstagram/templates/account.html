@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Daddy를 Dandy하게</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'img/logo-new.png' %}">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/product/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&family=Poppins:ital,wght@1,800&display=swap" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    
+    <!-- Custom styles for this template -->
+    <link href="../static/css/home.css" rel="stylesheet">
+    <link href="{% static 'css/account.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'css/nav.css' %}" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+ 
+    <!-- header : nav bar -->
+    <!-- header : nav bar -->
+    <nav class="navbar">
+        <div class="navbar_logo">
+          <img src="{% static 'img/logo-new.png' %}" height=40px width="90px">
+        </div>
+  
+        <ul class="navbar_menu">
+          <li class="nav_li"><a href="">회사 소개</a></li>
+          <li class="nav_li"><a href="">이용 가이드</a></li>
+          <li class="nav_li"><a href="">스타일리스트</a></li>
+          <li class="nav_li"><a href="">자주 묻는 질문</a></li>
+        </ul>
+  
+        <ul class="navbar_user">
+          <li class="nav_li"><a href="{% url 'signUp' %}">회원가입</a></li>
+        <li class="nav_li"><a href="{% url 'login' %}">로그인</a></li>
+        <li class="nav_li"><a href="{% url 'mypage' %}">마이페이지</a></li>
+        </ul>
+    </nav>
+    
+    <body>
+      {% if user.is_authenticated %}
+        <div id="app-body">
+            <div class="container-md container">
+                <main class="account-info-container">
+                    <h1>계정 설정</h1>
+                    <div class="profile-image">
+                        <div class="user-profile-picture">
+                            <div data-name="image">
+                              <img src="{% static 'img/011-user.png' %}" width="100" height="100">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <section data-v-51939f24>
+                        <ul class="account-info">
+                            <li class="item-container">
+                                <div class="item">
+                                    <div class="item-title">이름</div>
+                                    <div class="item-info">{{user_profile.user.username}}</div>
+                                </div>
+                            </li>
+                            <a class="item-container">
+                                <div class="item">
+                                    <div class="item-title">이메일</div>
+                                    <div class="item-info">
+                                        <span>{{user_profile.user.email}}</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="{% url 'changePwd_account' user_profile.user.email %}" class="item-container">
+                                <div class="item">
+                                    <div class="item-title">비밀번호</div>
+                                    <div class="item-info">{{user_profile.user.password}}</div>
+                                </div>
+                                <div>
+                                    <img src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
+                                </div>
+                            </a>
+                            <li class="item-container">
+                                <div class="item">
+                                    <div class="item-title">휴대전화 번호</div>
+                                    <div class="item-info">{{user_profile.phoneNum}}</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>      
+                </main>
+            </div>
+        </div>
+      {%else%}
+      {% endif %}
+    </body>
+</html>    

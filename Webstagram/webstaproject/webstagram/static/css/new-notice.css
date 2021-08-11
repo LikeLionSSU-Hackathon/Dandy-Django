@@ -1,0 +1,143 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+div {
+  display: block;
+}
+
+#app-body {
+  position: relative;
+  flex-grow: 1;
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+
+body {
+  margin: 0;
+  font-family: Noto Sans KR, Malgun Gothic, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol, Noto Color Emoji;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #323232;
+  text-align: left;
+  background-color: #fff;
+}
+
+.setting-header {
+  padding: 7.14rem 0 0;
+  max-width: 1000px;
+}
+
+/* .container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+} */
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.justify-content-center {
+  text-align: center;
+  margin-top: 140px;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.setting-header [data-name="page-header"] h1 {
+  text-align: center;
+  margin: 0;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.h1,
+h1 {
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+  letter-spacing: -0.04375rem;
+}
+
+:-webkit-any(article, aside, nav, section) h1 {
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+}
+
+h1 {
+  display: block;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: 400;
+}
+
+.setting-body {
+  max-width: 1000px;
+  padding: 1rem 0;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.escrow-hitory [data-name="page-info"] h1 {
+  margin: 0;
+  font-size: 1.57rem;
+  color: #525252;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.escrow-list-empty-text a {
+  margin-top: -70px;
+}
+
+/* .escrow-hitory .escrow-list-empty {
+  padding: 10rem 0;
+} */
+
+/* .escrow-hitory .escrow-list-empty .escrow-list-empty-text {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  color: #ccc;
+} */
+
+/* .escrow-hitory .escrow-list-empty .escrow-list-empty-text img {
+  display: block;
+  margin: 0 auto 2rem;
+} */
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+img {
+  border-style: none;
+}

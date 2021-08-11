@@ -1,21 +1,176 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>this is a mypage</h1>
-    {% if user.is_authenticated %}
-        <h1>Hello, username: {{user.username}}</h1>
-        <a href="{% url 'logout' %}">
-            <button class="logoutbutton">로그아웃</button>
-        </a>
-    {%else%}
-        <!--authenticate false면, views 에서 login으로 redirect-->
-    {% endif %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Daddy를 Dandy하게</title>
+    {% load static %}
+    <link rel="icon" href="../img/logo-new.png">
 
-</body>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/product/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&family=Poppins:ital,wght@1,800&display=swap" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'css/mypage.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'css/nav.css' %}" rel="stylesheet">
+
+  </head>
+
+ 
+    <!-- header : nav bar -->
+    <!-- header : nav bar -->
+    <!-- header : nav bar -->
+    <nav class="navbar">
+        <div class="navbar_logo">
+          <img src="{% static 'img/logo-new.png' %}" height=40px width="90px">
+        </div>
+  
+        <ul class="navbar_menu">
+          <li class="nav_li"><a href="">회사 소개</a></li>
+          <li class="nav_li"><a href="">이용 가이드</a></li>
+          <li class="nav_li"><a href="">스타일리스트</a></li>
+          <li class="nav_li"><a href="">자주 묻는 질문</a></li>
+        </ul>
+  
+        <ul class="navbar_user">
+          <li class="nav_li"><a href="{% url 'signUp' %}">회원가입</a></li>
+        <li class="nav_li"><a href="{% url 'login' %}">로그인</a></li>
+        <li class="nav_li"><a href="{% url 'mypage' %}">마이페이지</a></li>
+        </ul>
+    </nav>  
+    
+    <body>
+      <div id="body">
+          <div class = "container-md container">
+              <div class = "mypage-container">
+                  <h1 class="mypage-title">마이페이지</h1>
+                  <div class="profile-container underline">
+                      <a href="{% url 'account' %}" class>
+                          <div class="thumb">
+                              <div class="user-profile-picture">
+                                <div data-name="image" class="is-square" style="background-image: url(/img/011-user.png);"></div>
+                              </div>
+                          </div>
+                          <div class="user-info">
+                              <img src="{% static 'img/011-user.png' %}" width="30px" height="30px">
+                              <div class="user-name">
+                                  <span class="name-length">{{user.username}}</span>
+                                  " 고객님"
+                              </div>
+                              <div class="user-id">
+                                  <span class="id-length">{{user.email}}</span>
+                                  <span class="right-arrow">
+                                    <img src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
+                                  </span>
+                             </div>
+                          </div>
+                      </a>
+                  </div>
+                  <ul>
+                      <span class="main-menu">매칭화면</span>
+                      <li class="sub-menu-container underline">
+                          <a href="#" class="sub-menu-list">
+                                    <img src="{% static 'img/matching.png' %}" width="40px" height="50px">
+                                    <span class="sub-menu">Stylist 매칭화면</span>
+                                    <span class="right-arrow">
+                                        <img src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
+                                    </span>
+                              
+                              <!-- <div class="sub-content">
+                                  
+                              </div> -->
+                              <!-- <div class="arrow">
+                                  
+                              </div> -->
+                          </a>
+                      </li>
+                  </ul>
+                  <ul>
+                      <span class="main-menu">설정</span>
+                      <!-- <li class="sub-menu-container underline">
+                          <a href="#" class="sub-menu-list">
+                              <div class="icon-container">
+                                <img src="https://assets.cdn.soomgo.com/icons/icon-mypage-alarm.svg">
+                                <span class="sub-menu"></span>
+                                <span class="rigth-arrow">
+                                    <img data-v-2a482a90="" src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
+                                </span>
+                              </div>
+                              <div class="sub-content">
+                                  
+                              </div>
+                              <div class="arrow">
+                                 
+                              </div> -->
+                          </a>
+                      </li>
+                      <li class="sub-menu-container underline">
+                          <a href="{% url 'notice' %}" class="sub-menu-list">
+                              <div class="icon-container">
+                                <img src="https://assets.cdn.soomgo.com/icons/icon-mypage-soomgo-info.svg">
+                                <span class="sub-menu">공지사항</span>
+                                <span class="right-arrow">
+                                    <img data-v-2a482a90="" src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
+                                </span>
+                              </div>
+                              <!-- <div class="sub-content">
+                                  
+                              </div> -->
+                              <!-- <div class="arrow">
+                                  
+                              </div> -->
+                          </a>
+                      </li>
+                      <li class="sub-menu-container underline">
+                          <a href="#" class="sub-menu-list">
+                              
+                                <img data-v-2a482a90="" src="https://assets.cdn.soomgo.com/icons/icon-mypage-soomgo-notice.svg">
+                                <span class="sub-menu">User 가이드</span>
+                                <span class="right-arrow">
+                                    <img data-v-2a482a90="" src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
+                                </span>    
+                          </a>
+                      </li>
+                      <li class="sub-menu-container underline">
+                        <a href="#" class="sub-menu-list">
+                            
+                              <img data-v-2a482a90="" src="https://assets.cdn.soomgo.com/icons/icon-mypage-soomgo-notice.svg">
+                              <span class="sub-menu">Stylist 가이드</span>
+                              <span class="right-arrow">
+                                  <img data-v-2a482a90="" src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">
+                              </span>   
+                        </a>
+                    </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </body>
 </html>
+    
