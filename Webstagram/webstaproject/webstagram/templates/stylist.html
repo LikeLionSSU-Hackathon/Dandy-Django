@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daddy를 Dandy하게</title>
   {% load static %}
-  <link rel="icon" href="../img/logo-new.png">
+  <link rel="icon" href="{% static 'img/logo-new.png' %}">
   <link href="{% static 'css/stylist.css' %}" rel="stylesheet">
   <link href="{% static 'css/nav.css' %}" rel="stylesheet">
 
@@ -126,6 +126,8 @@
         </section>
       </button>
     </div>
+     <a href="{% url 'matching' %}"><button id='match-btn'>매칭 요청하기</button></a>
   </main>
+  <script src="{% static 'javascript/stylist.js' %}"></script>
 </body>
 </html>

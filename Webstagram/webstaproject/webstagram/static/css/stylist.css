@@ -126,11 +126,14 @@ a {
     border-left: white;
     border-right: white;
     border-bottom: black;
-}
-
-.stylist_list {
     cursor:pointer;
 }
+
+.stylist_list:hover{
+    border-bottom:none;
+    border:2px solid rgba(0,255,255);
+}
+
 .stylist_list img {
     border-radius: 20%;
 }
@@ -177,4 +180,16 @@ a {
     border-bottom-color: #e5e8eb;
     border-width: 0.5px;
     box-shadow: white;
+}
+
+#match-btn{
+    width:315px;
+    background-color: rgb(101, 210, 224);
+    color: white;
+    padding-top:10px;
+    padding-bottom: 10px;
+    margin-top: 15px;
+    border:none;
+    font-family:'Noto Sans KR',sans-serif;
+    cursor:pointer;
 }

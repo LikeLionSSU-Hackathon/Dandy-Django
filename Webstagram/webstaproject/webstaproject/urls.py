@@ -44,4 +44,5 @@ urlpatterns = [
     path('q8_1/',websta.q8_1,name='q8_1'),
     path('q9/',websta.q9,name='q9'),
     path('stylist/',websta.stylist,name='stylist'),
+    path('matching/',websta.matching,name='matching'),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

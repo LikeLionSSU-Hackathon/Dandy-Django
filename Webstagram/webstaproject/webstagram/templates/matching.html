@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daddy를 Dandy하게</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'img/logo-new.png' %}">
+    <link href="{% static 'css/matching.css' %}" rel="stylesheet">
+
+</head>
+<body class="content">
+    <div id="main">
+        <h1 class="title">스타일리스트에게</h1>
+        <h1 class="title">매칭 요청을 보냈습니다</h1>
+        <h2 class="subtext">스타일리스트에게 답변이 올 때까지 잠시만 기다려주세요</h2>
+        <a href="{% url 'home' %}" class="newBtn">홈 화면으로 돌아가기</a>
+    </div>
+</body>
+</html>

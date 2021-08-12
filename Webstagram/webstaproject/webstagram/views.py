@@ -85,3 +85,6 @@ def q9(request):
 
 def stylist(request):
     return render(request,'stylist.html')
+
+def matching(request):
+    return render(request,'matching.html')
