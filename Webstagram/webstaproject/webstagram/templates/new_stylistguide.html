@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Daddy를 Dandy하게</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'img/logo-new.png' %}">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/product/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&family=Poppins:ital,wght@1,800&display=swap" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/new_guide.css' %}" rel="stylesheet">
+    <link href="{% static 'css/nav.css' %}" rel="stylesheet">
+  </head>
+  <body>
+ 
+    <!-- header : nav bar -->
+    <!-- header : nav bar -->
+    <!-- header : nav bar -->
+    <nav class="navbar">
+      <div class="navbar_logo">
+          <a href="{% url 'home' %}">
+        <img src="{% static 'img/logo-new.png' %}" height=40px width="90px">
+    </a>
+      </div>
+
+      <ul class="navbar_menu">
+        <li class="nav_li"><a href="{% static 'home' %}">회사 소개</a></li>
+        <li class="nav_li"><a href="{% url 'userGuide' %}">이용 가이드</a></li>
+        <li class="nav_li"><a href="{% url 'stylistGuide' %}">스타일리스트</a></li>
+        <li class="nav_li"><a href="">자주 묻는 질문</a></li>
+      </ul>
+
+      <ul class="navbar_user">
+        <li class="nav_li"><a href="{% url 'signUp' %}">회원가입</a></li>
+        <li class="nav_li"><a href="{% url 'login' %}">로그인</a></li>
+        <li class="nav_li"><a href="{% url 'logout' %}">로그아웃</a></li>
+        <li class="nav_li"><a href="{% url 'mypage' %}"><img src="{% static 'img/011-user.png' %}" style="width:30px; height:30px; margin-top:-5px;"></a></li>
+      </ul>
+  </nav>
+
+<main>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 block-wrapper"  style="height:400px;"id="first-block">
+        <!--inner div-->
+        <div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden feature-wrapper" style=" display:table;">
+          <!--feature text div-->
+          <div class="my-3 p-3 feature-text" style="display:table-cell; color:white;">
+           <h2 class="display-6 fw-bold feature-word" style="text-align: center; font-size:30px;">아버지! 옷은 저희가 고르겠습니다</h2>
+           <p class="lead subText feature-word" style="width: max-content; font-size:15px;">필요사항만 체크하고 마음에 드는 옷을 추천한 스타일리스 소개를 받으세요. 댄디가 아버지 옷은 책임지겠습니다. </p>
+          </div>
+       </div>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 block-wrapper" >
+        <!--inner div-->
+        <div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden feature-wrapper">
+          <!--feature text div-->
+          <div class="my-3 p-3 feature-text" style="margin-top:80px;">
+           <h2 class="display-6 feature-word" style="text-align: center; font-size:35px;">댄디는 어떻게 이용하나요?</h2>
+          </div>
+       </div>
+    </div>
+
+  <!--아래부터는 feature block, 배경 색상 없애려면 bg-light 지우기-->
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 block-wrapper" >
+    <!--inner div-->
+    <div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden feature-wrapper">
+      <!--feature text div-->
+      <div class="my-3 p-3 feature-text" >
+       <h2 class="display-6 feature-word fw-bold titleText" style="font-size:30px;">스타일리스트를 소개받으세요</h2>
+       <p class="lead subText feature-word">아버지의 취향과 현재 상태만 알려주세요.
+        <br>댄디가 딱! 맞는 스타일리스트를 무료로 소개해 드릴께요
+         </p>
+      </div>
+      <!--feature image block-->
+      <div class="feature" style="margin-right:-50px;">
+        <div class="feature_img_div" style="width: 250px;">
+          <img class="feature_img" src="{% static 'img/userguide1.png' %}" alt="stop!">
+        </div>
+      </div>
+   </div>
+   <!--end of inner div-->
+
+   <!--line image block-->
+  </div>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 block-wrapper " style="margin-top:-50px;">
+    <div class=" me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden feature-wrapper" style="margin-top:-100px;">
+
+      <!--feature img block-->
+      <div class="feature" style="margin-left:30px;">
+        <div class="feature_img_div" style="width:600px;">
+          <img class="feature_img" src="{% static 'img/userguide2.png' %}" alt="stop!" width="500px;">
+        </div>
+      </div>
+      <!--feature text-->
+      <div class="my-3 p-3 feature-text" style="margin-left:70px;">
+       <h2 class="display-6 feature-word fw-bold titleText" style="font-size:30px;">스타일리스트를 비교해보세요</h2>
+       <p class="lead subText feature-word"> 아버지의 성향에 따른 옷 스타일을 추천해준<br> 스타일리스트들의 견적들을 비교해보세요!
+    </p>
+      </div>
+   </div>
+   <!--end of inner block-->
+
+  </div>
+
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 block-wrapper" >
+    <div class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden feature-wrapper" style="margin-bottom:50px; margin-top:-150px;">
+      <!--feature text-->
+      <div class="my-3 p-3 feature-text">
+       <h2 class="display-6 feature-word fw-bold titleText" style="font-size:30px;">나에게 딱! 맞는 스타일리스트를 선택하세요
+    </h2>
+       <p class="lead subText feature-word">짠! 아버지의 스타일링을 도와드리는 스타일리스트를 무료로 찾았습니다.<br>
+        자세한 내용은 직접 연락을 통해 하실 수 있습니다.</p>
+      </div>
+
+      <!--feature img-->
+      <div class="feature" style="width:500px; margin-right:0px;">
+        <div class="feature_img_div" style="width:500px; margin-left:-20px;">
+          <img class="feature_img" src="{% static 'img/new_3.jpg' %}" alt="stop!">
+        </div>
+      </div>
+
+   </div>
+   <!--end of inner block-->
+  </div>
+
+
+
+</main>
+
+
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>

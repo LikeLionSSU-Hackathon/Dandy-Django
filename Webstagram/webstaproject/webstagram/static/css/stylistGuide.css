@@ -1,0 +1,65 @@
+.stylist-guide-header {
+    height: 500px;
+    text-align: center;
+    margin: 0;
+    padding-top: 210px;
+}
+.stylist-guide-header-title {
+    margin-bottom: 20px;
+    height: 44px;
+    color: black;
+    text-align: center;
+    text-size-adjust: 100%;
+}
+.stylist-guide-header-title h1 {
+    text-size-adjust: 100%;
+}
+.stylist-guide-header-content p {
+    text-size-adjust: 100%;
+}
+.stylist-guide-contents-container-container {
+    height: 1399px;
+    width: 1000px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 316px;
+    margin-left: 316px;
+}
+.stylist-guide-content-title {
+    height: 33px;
+    width: 970px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+    text-size-adjust: 100%;
+}
+.stylist-guide-content-reverse {
+    height: 333px;
+    width: 970px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.stylist-guide-content-text1 {
+    height: 233px;
+    width: 475px;
+}
+.stylist-guide-content-text1 h3 {
+    height: 30px;
+    width: 475px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-size-adjust: 100%;
+}
+.stylist-guide-content-text1 p {
+    height: 140px;
+    width: 475px;
+    margin-bottom: 13px;
+}
+.stylist-guide-content {
+    height: 333px;
+    width: 970px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}

@@ -52,9 +52,9 @@
         </div>
   
         <ul class="navbar_menu">
-          <li class="nav_li"><a href="">회사 소개</a></li>
-          <li class="nav_li"><a href="">이용 가이드</a></li>
-          <li class="nav_li"><a href="">스타일리스트</a></li>
+          <li class="nav_li"><a href="{% url 'home' %}">회사 소개</a></li>
+          <li class="nav_li"><a href="{% url 'userGuide' %}">이용 가이드</a></li>
+          <li class="nav_li"><a href="{% url 'stylistGuide' %}">스타일리스트</a></li>
           <li class="nav_li"><a href="">자주 묻는 질문</a></li>
         </ul>
   
@@ -99,7 +99,7 @@
                             <a href="{% url 'changePwd_account' user_profile.user.email %}" class="item-container">
                                 <div class="item">
                                     <div class="item-title">비밀번호</div>
-                                    <div class="item-info">{{user_profile.user.password}}</div>
+                                    <div class="item-info">암호화 되어있습니다. 비밀번호를 바꾸려면 누르세요.</div>
                                 </div>
                                 <div>
                                     <img src="https://assets.cdn.soomgo.com/icons/icon-mypage-list-arrow.svg">

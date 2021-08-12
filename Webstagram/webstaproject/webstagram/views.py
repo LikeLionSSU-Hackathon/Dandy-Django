@@ -88,3 +88,11 @@ def stylist(request):
 
 def matching(request):
     return render(request,'matching.html')
+
+def stylistGuide(request):
+    return render(request,'new_stylistguide.html')
+
+def userGuide(request):
+    return render(request,'new_userguide.html')
+
+

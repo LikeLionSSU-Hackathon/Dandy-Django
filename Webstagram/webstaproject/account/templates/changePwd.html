@@ -32,9 +32,9 @@
         {% csrf_token %}
         <input type="hidden" name="next" value="{% url 'changePwd' usermsg %}">
         <p class="signInIndex">비밀번호</p>
-        <input type="password" class="userSignIn" name='pwd' placeholder="변경할 비밀번호를 입력해주세요." required>
+        <input type="password" class="userSignIn" name='pwd' placeholder="변경할 비밀번호를 입력해주세요." required minlength="6" maxlength="20">
         <p class="signInIndex">비밀번호 확인</p>
-        <input type="password" class="userSignIn" name='pwdCheck' placeholder="변경할 비밀번호를 다시 입력해주세요." required>
+        <input type="password" class="userSignIn" name='pwdCheck' placeholder="변경할 비밀번호를 다시 입력해주세요." required minlength="6" maxlength="20">
             
         <button id="loginButton">로그인하기</button>
     </form>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="kor">
+    <head>
+        <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+
+    <!Bootstrap CSS>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="{% static 'css/userGuide.css' %}" rel="stylesheet" type="text/css"> 
+    <link href="{% static 'css/nav.css' %}" rel="stylesheet" type="text/css">   
+    <title>user-guide</title>
+    </head>
+
+    <body class="guide-for-user">
+       
+        <!-- header : nav bar -->
+        <nav class="navbar">
+            <div class="navbar_logo">
+              <img src="{% static 'img/logo-new.png' %}" height=40px width="90px">
+            </div>
+      
+            <ul class="navbar_menu">
+              <li class="nav_li"><a href="{% url 'home' %}">회사 소개</a></li>
+              <li class="nav_li"><a href="{% url 'userGuide' %}">이용 가이드</a></li>
+              <li class="nav_li"><a href="{% url 'stylistGuide' %}">스타일리스트</a></li>
+              <li class="nav_li"><a href="">자주 묻는 질문</a></li>
+            </ul>
+      
+            <ul class="navbar_user">
+              <li class="nav_li"><a href="{% url 'signUp' %}">회원가입</a></li>
+              <li class="nav_li"><a href="{% url 'login' %}">로그인</a></li>
+              <li class="nav_li"><a href="{% url 'logout' %}">로그아웃</a></li>
+              <li class="nav_li"><a href="{% url 'mypage' %}"><img src="{% static 'img/011-user.png' %}" style="width:30px; height:30px; margin-top:-5px;"></a></li>
+            </ul>
+        </nav>
+
+
+      <main>
+        <div id="app-body">
+          <div class="user-guide-header">
+            <h1 class="user-guide-header-title">댄디는 어떻게 이용하나요?</h1>
+            <p class="user-guide-header-content">아하하하하하하하하</p>
+          </div>
+          <div class="user-guide-contents-container-container">
+            <h2 class="user-guide-content-title">으헤헤헿헤헤</h2>
+            <div class="user-guide-content-reverse">
+              <div class="user-guide-content-img" style="width:50%;">
+                    <img src="{% static 'img/userguide.png' %}">
+                  </div>
+              <div class="user-guide-content-text1">
+                <h3>간단한 설문조사를 해보세요</h3>
+                <p>블라블ㄹ라블랍르라</p>
+              </div>
+            </div>
+            <div class="user-guide-content-reverse">
+              <div class="user-guide-content-text1" style="width:50%;">
+                <h3>스타일리스트들을 비교해보세요</h3>
+                <p>스타일리스트아루아ㅜㄹ어</p>
+              </div>
+              <div class="user-guide-content-img">
+                <img src="{% static 'img/userguide.png' %}">
+              </div>
+            </div>
+            <div class="user-guide-content-reverse" >
+              <div class="user-guide-content-img" style="width:50%;">
+                <img src="{% static 'img/userguide.png' %}">
+              </div>
+              <div class="user-guide-content-text1">
+                <h3>나에게 딱! 맞는 스타일리스트를 선택하세요</h3>
+                <p>아아아아아아아</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </body>
+</html>
